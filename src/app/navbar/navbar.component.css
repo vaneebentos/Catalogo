@@ -1,0 +1,58 @@
+header img {
+    width: 100%;
+    height: auto; /* forma de ajuste automatico al dispositivo */
+  
+  /*  max-height: 300px; /* altura maxima de la imagen*/
+    object-fit: cover; /*es para que la imagen se ajuste al contenedor */
+}
+
+.barra-navegacion{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.barra-navegacion a{
+color: white;
+text-decoration: none;
+margin-right: 20px;
+}
+.barra-navegacion:hover .categorias{
+    display: block;
+}
+.categorias{
+    display: block;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+}
+
+.categorias a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.categorias:hover .opciones-desplegables{
+    display: block;
+}
+
+.opcion-desplegable{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* es para el espacio entre opciones */
+}
+
+.opciones-desplegables{
+    display: block;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.opcion-desplegable:hover .opciones-desplegables{
+    display: block;
+}
