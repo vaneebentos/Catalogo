@@ -18,28 +18,7 @@ export class ProductoService {
     return this.productos.filter(producto => producto.categoria === category);
   }
 
-  private productos: Producto[] = [
-    {
-      id: 1,
-      nombre: 'Producto 1',
-      precio: 10,
-      descripcion: 'Esta es la descripción del producto 1.',
-      imagenes: ['../assets/imagenes/producto_1jpg', '../assets/imagenes/producto_1-2.jpg'],
-      categoria: 'downpipe',
-      marca: 'peugeot' ,
-      
-    },
-    {
-      id:2,
-      nombre: 'Producto 2',
-      precio: 20,
-      descripcion: 'Esta es la descripción del producto 2.',
-      imagenes: ['../assets/imagenes/producto_1.jpg', '../assets/imagenes/producto_1-2.jpg'],
-      categoria: 'escapes',
-      marca:'fiat',
-    },
-   
-  ];
+  private productos: Producto[] = [ ];
 
   getProductos(): Producto[] {
     return this.productos;

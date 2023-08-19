@@ -42,8 +42,4 @@ export class NavbarComponent implements OnInit{
     this.desplegables[categoria]= !this.desplegables[categoria];
     console.log('Desplegable',categoria,this.desplegables[categoria]);
   }
-
-
- 
- 
   }

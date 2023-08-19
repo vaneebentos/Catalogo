@@ -40,12 +40,11 @@ export class ListaProductosComponent implements OnInit {
     verDetalle(producto: Producto) {
     this.router.navigate(['/producto', producto.id]);
   }
-
  
-  private obtenerBajada( ){
+   obtenerBajada( ) : void{
     this.bajadaService.obtenerListaDeBajadas ().subscribe(dato=> {
       this.bajadas= dato
-    })
+    });
   }
 
 

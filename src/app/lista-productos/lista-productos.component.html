@@ -3,8 +3,8 @@
   <div *ngFor="let bajada of bajadas"class="col s3 ">
     <div  class="card">
       <div class="card-image">
-        <img src= "{{bajada.imagen}}">
-        <span class="card-title">{{bajada.marca}}</span>
+        <img src= "bajada.imagen" >
+        <span class="card-title">{{bajada.marca}} {{bajada.modelo}}</span>
       </div>
       <div class="card-content">
         <p> Precio: {{bajada.precio  }}</p>
@@ -15,4 +15,5 @@
     </div>
   </div>
 </div>
+
 
