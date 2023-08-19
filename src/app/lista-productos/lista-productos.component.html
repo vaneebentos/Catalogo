@@ -1,18 +1,18 @@
-<!--
-<div *ngFor ="let producto of productos">
-  <h3>{{producto.nombre}}</h3>
-  <p>Precio:{{producto.precio}}</p>
-  <p>{{producto.descripcion}}</p>
 
-  <div class="imagenes-producto">
-    <img *ngFor="let imagen of producto.imagenes" [src]="imagen" alt="Imagen del producto">
+<div class="row">
+  <div *ngFor="let bajada of bajadas"class="col s3 ">
+    <div  class="card">
+      <div class="card-image">
+        <img src= "{{bajada.imagen}}">
+        <span class="card-title">{{bajada.marca}}</span>
+      </div>
+      <div class="card-content">
+        <p> Precio: {{bajada.precio  }}</p>
+      </div>
+      <div class="card-action">
+        <a href="#">{{bajada.detalle}}</a>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
 
-
-<div class="productos" *ngFor="let producto of productos">
-  <h3>{{producto.precio}}</h3>
-  <p>Precio: {{producto.precio}}</p>
-  <button (click)="verDetalle(producto)">Ver Producto</button>
-
-</div>-->

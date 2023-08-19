@@ -11,19 +11,10 @@ import { ActivatedRoute } from '@angular/router';
 export class DetalleProductoComponent implements OnInit {
 
   producto:Producto | undefined;
-  mostrarDetalles = false;
+  mostrarDetalles:boolean = false;
 
   
 
- /*  productos: Producto [] =[
-    {
-    nombre:'Downpipe Partner',
-    precio: 10,
-    descripcion: 'descripcion 1',
-    imagenes:[ '../assets/imagenes/Producto_1.jpg','../assets/imagenes/Producto_1-2.jpg'],
-  },]
-*/
-  
 
   constructor(
     private productoServicio:ProductoService,
@@ -34,9 +25,9 @@ export class DetalleProductoComponent implements OnInit {
      
     //para escuchar los cambios en los parámetros de la ruta. 
     this.router.params.subscribe(params => {
-      const productId = params ['id'];
-      this.producto= this.productoServicio.getProductoPorId(productId);
-      console.log('Producto:', this.producto);
+      const productId = Number (params ['id']);
+      this.producto= this.productoServicio.getProductoPorId(productId)[0];
+    
     });
   }
 

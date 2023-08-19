@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../shared/producto.model';
-import { ProductoService } from '../shared/producto.service'; // Asegúrate de que esta importación esté corregida
+import { ProductoService } from '../shared/producto.service'; 
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { BajadaService } from '../bajada.service';
+import { Bajada } from '../bajada';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'app-lista-productos',
@@ -11,48 +13,41 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListaProductosComponent implements OnInit {
   
-  productos:Producto[] =[];
-
-
- /*
-  productos: Producto[] = [
-    {
-      nombre: 'Downpipe Partner',
-      precio: 10,
-      descripcion: ' producto1',
-      imagenes: ['../assets/imagenes/Producto_1.jpg' ,'../assets/imagenes/Producto_1-2.jpg']
-
-    },
-  ];
-*/
+  productos:Producto[] ;
+  bajadas: Bajada [];
+  product = [];
   constructor(
     private productoService: ProductoService,
     private route:ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private bajadaService: BajadaService,
     ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      const category = params['category']; // es para obtener la categoria de los parametros de la rutas  
-     /* El código está verificando si el parámetro 'Categoría' está presente en la ruta.Si es así, llama
-      El `getProductosporCategoria (categoría)` Método del 'ProductOservice' para obtener los productos
-      filtrado por esa categoría.Si el parámetro 'Categoría' no está presente, llama al
-      `getProductos ()` Método del 'ProductOservice' para obtener todos los productos.La resultante
-      Luego se asignan los productos a la matriz 'ProductOS'.*/
-      if (category){
-        this.productos = this.productoService.getProductosPorCategoria(category);
-       }else{
-        this.productos = this.productoService.getProductos();
+      const productoId = Number (params['id']); 
+       this.productos = this.productoService.getProductoPorId(productoId);
+       this.obtenerBajada ();
+
+       console.log('Producto obtenido:',this.productos)
+     
+      if ( !this.productos){
+       console.log('Producto no encontrado');
        }
       });
       
       }
-    /**
-     * La función "VerDetalle" navega a la página de detalles del producto con la ID de producto especificada.
-     * @param {ProductO} ProductO - El parámetro "ProductO" es de tipo "ProductO".
-     */
     verDetalle(producto: Producto) {
-    this.router.navigate(['/detalle-producto', producto.id]);
+    this.router.navigate(['/producto', producto.id]);
   }
-  
+
+ 
+  private obtenerBajada( ){
+    this.bajadaService.obtenerListaDeBajadas ().subscribe(dato=> {
+      this.bajadas= dato
+    })
+  }
+
+
+
 }

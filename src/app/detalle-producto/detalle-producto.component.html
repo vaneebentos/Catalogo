@@ -1,25 +1,5 @@
-<div *ngIf="producto">   <!-- se usa el if para que muestre la inf. del prodc. solo si se cargo correctamente-->
-    <h2>{{producto.nombre}}</h2>
-    <img [src]="['../assets/imagen/Producto_1.jpg ']" alt="Imagen del producto">
-    <div>
-      <p>Precio:{{producto.precio}}</p>
-      <p>{{producto.descripcion}}</p>
-    
-  </div>
-</div>
-
-
-
-
-<!--
-<section calls="productos">
-    <div class="producto" *ngFor="let producto of productos">
-        <h3>{{producto.nombre}}</h3>
-        <p>Precio: ${{producto.precio}}</p>
-        <p>{{producto.descripcion}}</p>
-        <div class="imagenes-producto">
-        <img *ngFor="let imagen of producto.imagenes"[src]="imagen" alt="Imagen del producto">
-    </div>
-</div>
-</section>
--->
+<div  lass="container" *ngIf="producto">
+<h2>Detalles del producto</h2>
+    <p><strong>Precio:</strong> {{ producto.precio }}</p>
+    <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+</div> 

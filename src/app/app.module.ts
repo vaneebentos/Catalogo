@@ -6,21 +6,30 @@ import { AppComponent } from './app.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProductoService } from './shared/producto.service';
+import {HttpClientModule} from '@angular/common/http';
+import { ProductCardComponent } from './product-card/product-card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaProductosComponent,
     DetalleProductoComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductCardComponent,
+   
+    
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
     
   
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
