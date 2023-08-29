@@ -1,16 +1,18 @@
-
-<div class="row">
-  <div *ngFor="let bajada of bajadas"class="col s3 ">
-    <div  class="card">
+<div class="catalogo-container ">
+  <div *ngFor="let producto of productoList"class="col s4 m7 ">
+    <div  class="card horizontal ">
       <div class="card-image">
-        <img src= "bajada.imagen" >
-        <span class="card-title">{{bajada.marca}} {{bajada.modelo}}</span>
+        <img [src]="producto.imagenUrl" alt="Imagen">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+        <span class="card-title">{{producto.marca}} {{producto.modelo}}</span>
       </div>
       <div class="card-content">
-        <p> Precio: {{bajada.precio  }}</p>
+        <p> Precio: {{producto.precio  }}</p>
       </div>
       <div class="card-action">
-        <a href="#">{{bajada.detalle}}</a>
+        <a href="#">{{producto.detalle}}</a>
       </div>
     </div>
   </div>

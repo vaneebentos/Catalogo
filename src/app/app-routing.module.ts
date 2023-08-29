@@ -5,12 +5,10 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
 
 const routes: Routes = [
   {path: 'lista-productos',component:ListaProductosComponent},
+  {path: 'lista-productos/:grupo/:marca',component:ListaProductosComponent},
   {path: 'producto/:id',component:DetalleProductoComponent},
   {path:'productos/:category',component: ListaProductosComponent},
-  {path:'detalle-producto',component: DetalleProductoComponent},
-  {path:"escapes/:id",component: DetalleProductoComponent},
-  {path:"downpipe/:id",component: DetalleProductoComponent},
-  {path:"multiples/:id",component: DetalleProductoComponent}
+ 
   
 
 ];

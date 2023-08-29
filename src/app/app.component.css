@@ -1,0 +1,23 @@
+#header {
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header #encabezado {
+    width: 100%;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+#header #encabezado img {
+    background: none;
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+}

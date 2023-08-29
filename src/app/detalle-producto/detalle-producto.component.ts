@@ -13,9 +13,6 @@ export class DetalleProductoComponent implements OnInit {
   producto:Producto | undefined;
   mostrarDetalles:boolean = false;
 
-  
-
-
   constructor(
     private productoServicio:ProductoService,
     private router:ActivatedRoute,
