@@ -1,8 +1,9 @@
 #header {
-    min-width: 1024px;
-    width: 100%;
-    height: 250px;
-    margin: 0px auto;
+   
+    width:100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
 }
 
 #header a {
@@ -11,8 +12,8 @@
 
 #header #encabezado {
     width: 100%;
-    margin: 0px auto;
-    padding-top: 20px;
+    margin-top: 0%;
+    padding-top: 0%;
 }
 
 #header #encabezado img {
@@ -21,3 +22,36 @@
     margin: 0px auto;
     width: 100%;
 }
+
+.mifecha {
+    background-color: #999;
+    padding: 3px;
+    width: 110px;
+    text-align: center;
+    font-family:verdana, arial;
+    font-size: 12pt;
+ }
+ .mifecha .ano{
+    background-color: #339;
+    padding: 2px;
+    font-size: 100%;
+    margin-bottom: 3px;
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: bold;
+ }
+ .mifecha .dia{
+    background-color: #99f;
+    font-size: 300%;
+    padding: 5px 8px;
+    margin-bottom: 3px;
+    font-weight: bold;
+ }
+ .mifecha .mes{
+    background-color: #339;
+    font-size: 80%;
+    padding: 2px;
+    color: #fff;
+    font-weight: bold;
+ }
+ 

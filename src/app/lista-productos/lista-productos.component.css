@@ -4,4 +4,13 @@
     width: auto;
     height: auto;
   }
-  
+  .card {
+    height: 100%;
+    margin-bottom: 0;
+    flex-basis: 25%; /* 4 tarjetas por fila */
+  }
+  .card-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }

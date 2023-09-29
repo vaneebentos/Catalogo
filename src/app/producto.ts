@@ -6,4 +6,8 @@ export class Producto {
      precio: Number;
      imagenUrl: String;
      grupo: String;
+     precioDistribuidor:Number;
+     imagenBlob: any;
+
+
 }

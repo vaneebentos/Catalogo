@@ -1,21 +1,21 @@
-<div class="catalogo-container ">
-  <div *ngFor="let producto of productoList"class="col s4 m7 ">
-    <div  class="card horizontal ">
-      <div class="card-image">
-        <img [src]="producto.imagenUrl" alt="Imagen">
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-        <span class="card-title">{{producto.marca}} {{producto.modelo}}</span>
-      </div>
-      <div class="card-content">
-        <p> Precio: {{producto.precio  }}</p>
-      </div>
-      <div class="card-action">
-        <a href="#">{{producto.detalle}}</a>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="row card-container">
+   
+    <div *ngFor="let producto of productoList" class="col s3 mb-4 mt-4" style="bottom: 0px">
+        <div class="card" style="width: 18rem;">
+         <!--   <img class="card-img-top" src="{{producto.imagenUrl}}" alt="Card image cap">-->
+             <img [src]="producto.imagenBlob" alt="{{producto.marca}} Imagen" width="280px"> 
 
+            <img src="" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{producto.marca.toUpperCase()}} {{producto.modelo.toUpperCase()}}</h5>
+                <h5><b>CLIENTE: USD {{producto.precio?.toFixed(2)}}</b></h5>   
+                <h5><b>DISTRI: USD {{producto.precioDistribuidor?.toFixed(2)}}</b></h5>
+                
+                <p class="card-text">{{producto.detalle.toUpperCase()}}</p>
+                
+               
+            </div>
+        </div>
+    </div>
+</div>
 

@@ -10,22 +10,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalleProductoComponent implements OnInit {
 
-  producto:Producto | undefined;
-  mostrarDetalles:boolean = false;
+  producto: Producto | undefined;
+  mostrarDetalles: boolean = false;
+  imagenUrl: string | undefined; // Variable para almacenar la URL de la imagen
 
   constructor(
-    private productoServicio:ProductoService,
-    private router:ActivatedRoute,
+    private productoServicio: ProductoService,
+    private router: ActivatedRoute
   ) { }
 
-  ngOnInit() :void{// Obtener el producto del servicio o de la ruta
-     
-    //para escuchar los cambios en los parámetros de la ruta. 
+  ngOnInit(): void {
+    // Obtener el producto del servicio o de la ruta
     this.router.params.subscribe(params => {
-      const productId = Number (params ['id']);
-      this.producto= this.productoServicio.getProductoPorId(productId)[0];
-    
-    });
-  }
-
+      const productId = Number(params['id']);
+      this.producto = this.productoServicio.getProductoPorId(productId)[0];
+ });
+    }
+      // Llamar al servicio para obtener la URL de la imagen
+    /*  this.productoServicio.obtenerUrlDeImagen(productId).subscribe(url => {
+        this.imagenUrl = url;
+     
+  }*/
 }
