@@ -121,4 +121,16 @@ export class AppComponent implements OnInit {
   mostrarTodosLosProductos(): void {
     this.router.navigate(['/lista-productos']);
   }
+
+  revertirCambios(): void {
+    // Recupera la lista original de productos antes de aplicar los filtros
+    this.productoService.obtenerListaDeProductos().subscribe((dato) => {
+      this.productoList = dato;
+  
+      // Itera a través de la lista y carga las imágenes nuevamente
+      this.productoList.forEach((el, index) => {
+        if (el.imagenUrl != undefined) this.getImagen(el.imagenUrl, index);
+      });
+    });
+  }
 }
