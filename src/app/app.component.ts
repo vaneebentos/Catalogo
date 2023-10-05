@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerProducto('*', '*');
+
   }
 
   selectedFile: File;
@@ -115,5 +116,9 @@ export class AppComponent implements OnInit {
       };
       reader.readAsDataURL(data);
     });
+  }
+
+  mostrarTodosLosProductos(): void {
+    this.router.navigate(['/lista-productos']);
   }
 }

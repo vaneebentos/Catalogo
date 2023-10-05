@@ -22,6 +22,18 @@
     margin: 0px auto;
     width: 100%;
 }
+.custom-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-buttons input {
+    width: 60px;
+  }
+  
+  .custom-buttons button {
+    margin-left: 5px;
+  }
 
 .mifecha {
     background-color: #999;
