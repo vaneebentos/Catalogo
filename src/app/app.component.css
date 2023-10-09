@@ -66,4 +66,15 @@
     color: #fff;
     font-weight: bold;
  }
- 
+ .custom-buttons button {
+  background-color: rgba(90, 107, 101, 0.959); /* Fondo rojo */
+  color: rgb(245, 242, 242); /* Texto blanco */
+  margin-right: 5px; /* Espacio entre botones (ajusta según sea necesario) */
+  border: none; /* Sin borde */
+  padding: 8px 12px; /* Ajusta el relleno según sea necesario */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.custom-buttons button:hover {
+  background-color: rgb(155, 148, 148); /* Cambia el color de fondo al pasar sobre el botón */
+}

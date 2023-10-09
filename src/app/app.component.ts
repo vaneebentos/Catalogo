@@ -119,6 +119,13 @@ export class AppComponent implements OnInit {
   }
 
   mostrarTodosLosProductos(): void {
+   /* this.productoService.obtenerListaDeProductos().subscribe((dato)=>{
+      this.productoList = dato ;
+
+      this.productoList.forEach((el, index)=>{
+        if(el.imagenUrl != undefined)this.getImagen(el.imagenUrl,index);
+      });
+    });*/
     this.router.navigate(['/lista-productos']);
   }
 
