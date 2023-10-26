@@ -1,8 +1,8 @@
+<!--  muestra una lista de productos en un diseño de tarjeta.-->
 <div class="row card-container">
    
     <div *ngFor="let producto of productoList" class="col s3 mb-4 mt-4" style="bottom: 0px">
         <div class="card" style="width: 18rem;">
-         <!--   <img class="card-img-top" src="{{producto.imagenUrl}}" alt="Card image cap">-->
              <img [src]="producto.imagenBlob" alt="{{producto.marca}} Imagen" width="280px"> 
 
             <img src="" alt="">

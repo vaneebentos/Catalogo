@@ -26,9 +26,4 @@ export class DetalleProductoComponent implements OnInit {
       this.producto = this.productoServicio.getProductoPorId(productId)[0];
  });
     }
-      // Llamar al servicio para obtener la URL de la imagen
-    /*  this.productoServicio.obtenerUrlDeImagen(productId).subscribe(url => {
-        this.imagenUrl = url;
-     
-  }*/
 }

@@ -1,15 +1,27 @@
+<!--  una sección de encabezado con una imagen.La fuente de la imagen es
+"../assets/imagenes/encabezado.jpg" y tiene un atributo ALT establecido en "Encabezado".Este encabezado
+La sección está contenida dentro de un DIV con la clase "Consejo de encabezado".-->
 <div class="header-container">
   <header id="header">
     <div id="encabezado">
       <img src="../assets/imagenes/Encabezado.jpg" alt="Encabezado">
     </div>
   </header>
- <div class="content-container">
+  <!-- una barra de navegación con menús desplegables.La barra de navegación es
+contenido dentro de un `<div>` elemento con la clase "contenido contenedor".La barra de navegación tiene el estilo
+con las clases "Navbar", "Navbar-Expand-SM", "BG-Dark" y "Navbar-Dark".Tiene una posición fija
+En la parte superior de la página con un margen de 0px y una parte inferior de 75px.-->
+  <div class="content-container">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-top: 0px; bottom: 75px;top: 0;">
-     
+
       <ul class="navbar-nav">
 
 
+        <!--  un menú desplegable para "Bajadas" (que podría ser una categoría o un
+        tipo de producto).Cuando se hace clic en el botón, el menú desplegable aparece con una lista de
+        opciones.Cada opción es un enlace a una página diferente, especificada por el atributo RouterLink.
+        El evento (clic) se utiliza para llamar a la función "ObtenerProducto" con los apropiado
+        Parámetros Cuando se hace clic en una opción.-->
         <li class="nav-item ml-2">
           <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -18,21 +30,21 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['/lista-productos','bajadas','audi']"
-                (click)= "obtenerProducto ('bajadas','audi')">Audi</a>
+                (click)="obtenerProducto ('bajadas','audi')">Audi</a>
               <a class="dropdown-item" [routerLink]="['/lista-productos','bajadas','peugeot']"
-                (click)= "obtenerProducto ('bajadas','peugeot')">Peugeot</a>
+                (click)="obtenerProducto ('bajadas','peugeot')">Peugeot</a>
               <a class="dropdown-item" [routerLink]="['/lista-productos','bajadas','toyota']"
-                (click)= "obtenerProducto('bajadas','toyota') ">Toyota</a>
+                (click)="obtenerProducto('bajadas','toyota') ">Toyota</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','bajadas','bora']"
-                (click)= "obtenerProducto ('bajadas','bora')">Bora</a>
+                (click)="obtenerProducto ('bajadas','bora')">Bora</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'bajadas','volkswagen']"
-                (click)= "obtenerProducto ('bajadas','volkswagen')">Volkswagen</a>
+                (click)="obtenerProducto ('bajadas','volkswagen')">Volkswagen</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'bajadas','bmw']"
-                (click)= "obtenerProducto ('bajadas','BMW')">BMW</a>
+                (click)="obtenerProducto ('bajadas','BMW')">BMW</a>
               <a class="dropdown-item" [routerLink]="['lista-productos' , 'bajadas', 'chevrolet']"
-                (click)= "obtenerProducto ('bajadas','chevrolet')">Chevrolet</a>
+                (click)="obtenerProducto ('bajadas','chevrolet')">Chevrolet</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'bajadas','fiat']"
-                (click)= "obtenerProducto ('bajadas','fiat')">Fiat</a>
+                (click)="obtenerProducto ('bajadas','fiat')">Fiat</a>
             </div>
           </div>
         </li>
@@ -45,13 +57,13 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['lista-productos', 'escapes','chevrolet']"
-                (click)= "obtenerProducto ('escapes','chevrolet')">Chevrolet</a>
-              <a class= "dropdown-item" [routerLink]="['lista-productos' , 'escapes','fiat']"
-                (click)= "obtenerProducto ('escapes','fiat')">Fiat</a>
+                (click)="obtenerProducto ('escapes','chevrolet')">Chevrolet</a>
+              <a class="dropdown-item" [routerLink]="['lista-productos' , 'escapes','fiat']"
+                (click)="obtenerProducto ('escapes','fiat')">Fiat</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'escapes','ford']"
-                (click)= "obtenerProducto ('escapes','ford')">Ford</a>
+                (click)="obtenerProducto ('escapes','ford')">Ford</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'escapes','volkswagen']"
-                (click)= "obtenerProducto ('escapes','volkswagen')">Volkswagen</a>
+                (click)="obtenerProducto ('escapes','volkswagen')">Volkswagen</a>
 
             </div>
           </div>
@@ -65,21 +77,21 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['lista-productos','multiples','chevrolet']"
-                (click)= "obtenerProducto ('multiples','chevrolet')">Chevrolet</a>
+                (click)="obtenerProducto ('multiples','chevrolet')">Chevrolet</a>
               <a class="dropdown-item" [routerLink]="['lista-productos' , 'multiples','ford']"
-                (click)= "obtenerProducto ('multiples','ford')">Ford</a>
+                (click)="obtenerProducto ('multiples','ford')">Ford</a>
               <a class="dropdown-item" [routerLink]="['lista-productos' , 'multiples', 'peugeot']"
-                (click)= "obtenerProducto ('multiples','peugeot')">Peugeot</a>
+                (click)="obtenerProducto ('multiples','peugeot')">Peugeot</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','multiples','honda']"
-                (click)= "obtenerProducto('multiples','honda')">Honda</a>
+                (click)="obtenerProducto('multiples','honda')">Honda</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'multiples','porsche']"
-                (click)= "obtenerProducto ('multiples','porsche')">Porsche</a>
+                (click)="obtenerProducto ('multiples','porsche')">Porsche</a>
               <a class="dropdown-item" [routerLink]="['lista-productos' ,'multiples','renault']"
-                (click)= "obtenerProducto ('multiples','renault')">Renault</a>
+                (click)="obtenerProducto ('multiples','renault')">Renault</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','multiple','volkswagen']"
-                (click)= "obtenerProducto ('multiples','volkswagen')">Volkswagen</a>
+                (click)="obtenerProducto ('multiples','volkswagen')">Volkswagen</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'multiples','vento']"
-                (click)= "obtenerProducto ('multiples','vento')">Vento</a>
+                (click)="obtenerProducto ('multiples','vento')">Vento</a>
             </div>
           </div>
         </li>
@@ -92,11 +104,11 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['lista-productos', 'motos','honda']"
-                (click)= "obtenerProducto ('motos','honda')">Honda</a>
+                (click)="obtenerProducto ('motos','honda')">Honda</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'motos', 'suzuki']"
-                (click)= "obtenerProducto ('motos','suzuki')">Suzuki</a>
+                (click)="obtenerProducto ('motos','suzuki')">Suzuki</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','motos','yamaha']"
-                (click)= "obtenerProducto ('motos','yamaha')">Yamaha</a>
+                (click)="obtenerProducto ('motos','yamaha')">Yamaha</a>
 
             </div>
           </div>
@@ -109,21 +121,21 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['lista-productos', 'trombones','top_race']"
-                (click)= "obtenerProducto ('trombones','top_race')">Top Race</a>
+                (click)="obtenerProducto ('trombones','top_race')">Top Race</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','trombones','mv']"
-                (click)= "obtenerProducto ('trombones','mv')">Multivalvulas</a>
+                (click)="obtenerProducto ('trombones','mv')">Multivalvulas</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','trombones','stock_car']"
-                (click)= "obtenerProducto ('trombones','stock_car')">Stock Car</a>
+                (click)="obtenerProducto ('trombones','stock_car')">Stock Car</a>
               <a class="dropdown-item" [routerLink]="['lista-productos', 'trombones','opala']"
-                (click)= "obtenerProducto ('trombones','opala')">Opala</a>
+                (click)="obtenerProducto ('trombones','opala')">Opala</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','trombones','6_cilindros']"
-                (click)= "obtenerProducto ('trombones','6_cilindros')">6 Cilindros</a>
+                (click)="obtenerProducto ('trombones','6_cilindros')">6 Cilindros</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','trombones','fiat']"
-                (click)= "obtenerProducto ('trombones','fiat')">Fiat</a>
+                (click)="obtenerProducto ('trombones','fiat')">Fiat</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','trombones','volkswagen']"
-                (click)= "obtenerProducto ('trombones','volkswagen')">Volkswagen</a>
+                (click)="obtenerProducto ('trombones','volkswagen')">Volkswagen</a>
               <a class="dropdown-item" [routerLink]="['lista-productos','trombones','formula_metropolitana']"
-                (click)= "obtenerProducto ('trombones','formula_metropolitana')">Formula Metropolitana</a>
+                (click)="obtenerProducto ('trombones','formula_metropolitana')">Formula Metropolitana</a>
             </div>
           </div>
         </li>
@@ -136,11 +148,11 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['lista-productos']"
-                (click)= "obtenerProducto ('avion','cessna')">Cessna</a>
+                (click)="obtenerProducto ('avion','cessna')">Cessna</a>
               <a class="dropdown-item" [routerLink]="['lista-productos']"
-                (click)= "obtenerProducto ('avion','bravo')">Bravo</a>
+                (click)="obtenerProducto ('avion','bravo')">Bravo</a>
               <a class="dropdown-item" [routerLink]="['lista-productos']"
-                (click)= "obtenerProducto ('avion','aero_boero')">Aereo Boero</a>
+                (click)="obtenerProducto ('avion','aero_boero')">Aereo Boero</a>
             </div>
           </div>
         </li>
@@ -153,37 +165,41 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['lista-productos']"
-                (click)= "obtenerProducto ('competicion','formula')">Formula</a>
+                (click)="obtenerProducto ('competicion','formula')">Formula</a>
               <a class="dropdown-item" [routerLink]="['lista-productos']"
-                (click)= "obtenerProducto ('competicion','fiat')">Fiat</a>
+                (click)="obtenerProducto ('competicion','fiat')">Fiat</a>
               <a class="dropdown-item" [routerLink]="['lista-productos']"
-                (click)= "obtenerProducto ('competicion','volkswagen')">Volkswagen</a>
+                (click)="obtenerProducto ('competicion','volkswagen')">Volkswagen</a>
+              <a class="dropdown-item" [routerLink]="['lista-productos']"
+                (click)="obtenerProducto ('competicion','tc')">TC</a>
+              <a class="dropdown-item" [routerLink]="['lista-productos']"
+                (click)="obtenerProducto ('competicion','dodge_MV')">Dodge MV</a>
 
             </div>
           </div>
         </li>
       </ul>
 
+
       <div class="nav-item ml-2 custom-buttons ">
         <label for="porcentaje"></label>
         <input type="number" #porcentaje id="porcentaje" value="0" min="0" step="1">
-        <button (click)= "ajustarPrecio(porcentaje.value)">Ajustar Precio</button>
-        <button (click)= "deshacerAjuste(porcentaje.value)" >Deshacer Ajuste</button>
-      <button (click)= "revertirCambios()">Mostrar Productos</button>
+        <button (click)="ajustarPrecio(porcentaje.value)">Ajustar Precio</button>
+        <button (click)="deshacerAjuste(porcentaje.value)">Deshacer Ajuste</button>
+        <button (click)="revertirCambios()">Mostrar Productos</button>
       </div>
 
 
-      
 
 
-    
+
+
     </nav>
 
 
     <div class="content-container">
-      <app-lista-productos [productoList]="productoList" ></app-lista-productos>
+      <app-lista-productos [productoList]="productoList"></app-lista-productos>
       <router-outlet></router-outlet>
     </div>
-    </div>
+  </div>
 </div>
-  
