@@ -8,8 +8,10 @@
             <img src="" alt="">
             <div class="card-body">
                 <h5 class="card-title">{{producto.marca.toUpperCase()}} {{producto.modelo.toUpperCase()}}</h5>
-                <h5><b>CLIENTE: USD {{producto.precio?.toFixed(2)}}</b></h5>   
-                <h5><b>DISTRI: USD {{producto.precioDistribuidor?.toFixed(2)}}</b></h5>
+                <h5><b>CLIENTE: USD {{producto.precio?.toFixed(2)}}</b></h5> 
+                <h5><b>         $ {{(producto.precio * data.venta)?.toFixed(2)}}</b></h5>  
+                <h5><b>DISTRI:  USD {{producto.precioDistribuidor?.toFixed(2)}}</b></h5>
+                <h5><b>         $ {{(producto.precioDistribuidor * data.venta)?.toFixed(2)}}</b></h5>
                 
                 <p class="card-text">{{producto.detalle.toUpperCase()}}</p>
                 

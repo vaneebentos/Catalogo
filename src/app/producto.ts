@@ -3,10 +3,10 @@ export class Producto {
      marca:String;
      modelo:String;
      detalle:String;
-     precio: Number;
+     precio: any;
      imagenUrl: String;
      grupo: String;
-     precioDistribuidor:Number;
+     precioDistribuidor:any;
      imagenBlob: any;
 
 
