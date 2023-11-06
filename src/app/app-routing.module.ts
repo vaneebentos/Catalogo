@@ -4,6 +4,8 @@ import { ListaProductosComponent } from './lista-productos/lista-productos.compo
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { AppComponent } from './app.component';
 
+/* La variable `const rutas: rutas` es una matriz de objetos de ruta.Cada objeto de ruta representa un
+ruta específica en la aplicación.*/
 const routes: Routes = [
   {path: '',component:ListaProductosComponent},
   {path: 'lista-productos',component:ListaProductosComponent},

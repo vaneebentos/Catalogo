@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
 import { ProductoService } from '../producto.service';
 import { Producto } from '../producto';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from '../service/api.service';
+
 
 @Component({
   selector: 'app-lista-productos',
@@ -27,8 +28,13 @@ export class ListaProductosComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private rutaActiva: ActivatedRoute,
-    private apiService : ApiService
-  ) {}
+    private apiService : ApiService,
+    @Inject(LOCALE_ID) private localeId: string, // Inyecta el LOCALE_ID
+
+   
+  ) {
+    this.localeId = this.localeId; // Establece el locale en el constructor
+  }
 
   ngOnInit(): void {
     this.LlenarData();
@@ -44,5 +50,6 @@ LlenarData(){
   })
 
 }
+
 
 }

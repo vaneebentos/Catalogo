@@ -48,10 +48,10 @@ export class ProductoService {
     return this.httpClient.put<Producto[]>(`${this.URLUPDATE}`, productos);
   }
 
-  /* The `getImagen` function is used to retrieve an image from the server. It takes an `imageName`
-  parameter of type `String` and returns an `Observable` of type `Blob`. It makes an HTTP GET
-  request to the specified URL (`${this.imagenURL}/imagen/`) and sets the `responseType`
-  to `'blob'` to indicate that the response should be treated as a binary blob. */
+  /* La función `getImagen` se usa para recuperar una imagen del servidor.Se necesita un 'nombre de imaginación'
+  Parámetro del tipo `string` y devuelve un` observable` de tipo `blob`.Hace que un http obtenga
+  Solicitud a la URL especificada (`$ {this.Imagenurl}/Imagen/`) y establece el `ResponseTetype` '
+  a `'blob' 'para indicar que la respuesta debe tratarse como una blob binaria.*/
    getImagen(imageName: String): Observable<Blob>{
   return this.httpClient.get(`${this.imagenURL}/imagen/${imageName}`, { responseType: 'blob' });
    }

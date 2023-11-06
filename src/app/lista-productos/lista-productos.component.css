@@ -1,16 +1,119 @@
 .card-image img {
-    max-width: 100px; /* Ajusta el tamaño según tus necesidades */
-    max-height: 100px; /* Ajusta el tamaño según tus necesidades */
-    width: auto;
-    height: auto;
-  }
-  .card {
-    height: 100%;
-    margin-bottom: 0;
-    flex-basis: 25%; /* 4 tarjetas por fila */
-  }
-  .card-container {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+.card {
+  height: 100%;
+  margin-bottom: 0;
+  flex-basis: 25%;
+  /* 4 tarjetas por fila */
+  display: flex;
+  flex-direction: column;
+  /* Alinea los elementos internos en columna */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /*Es para que tenga un efecto zoom*/
+  min-height: 100px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.card-image img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+.card-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-bottom: 0;
+  gap: 10px; /* Espacio entre las tarjetas*/
+}
+.card p{
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Estilo para la palabra "CLIENTE" */
+.cliente-text {
+  color: rgb(255, 0, 0);
+  font-size: 8px; /* Ajusta el tamaño*/
+}
+
+/* Estilo para la palabra "DISTRI" */
+.distri-text {
+  color: rgb(255, 0, 0);
+  font-size: 8px; /* Ajusta el tamaño*/
+}
+
+.card h5 b span {
+  font-size: 18px;
+}
+
+.card h5.monto {
+  font-size: 12px;
+  max-width: 100%; /* Limita el ancho al 100% del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que desborde */
+  white-space: nowrap; /* No permite saltos de línea */
+  text-overflow: ellipsis;
+  position: relative;
+  
+}
+.card h5.monto sup {
+  font-size: 8px; /* Ajusta el tamaño de fuente de los centavos */
+  vertical-align: super; /* Posiciona los centavos un poco más arriba */
+  margin-top: -2px; 
+}
+
+.precio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:10 ;
+  margin-bottom: 0px;
+
+}
+
+.precio-values {
+  display: flex;
+  gap: 2px;
+  /* Espacio entre los elementos */
+}
+.precio-values span {
+  vertical-align: middle; /* Alinea verticalmente los símbolos de moneda */
+  margin-right: 14px; /* Ajusta el espacio entre los símbolos de moneda y los números */
+  display: flex;
+  align-items: baseline; /* Alinea los elementos en la línea de base */
+}
+
+.distri-text{
+  font-size: 16px;
+ 
+}
+
+.cliente-text {
+  font-size: 16px;
+}
+.monto{
+  font-size: 14px;
+  color: rgb(10, 0, 0);
+}
+.monto sup{
+  font-size: 10px;
+  margin-left:2px ;
+  
+}
+.card-text-detalle{
+  margin-bottom: 10px;
+}

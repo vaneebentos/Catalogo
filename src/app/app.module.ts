@@ -9,6 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductoService } from './shared/producto.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductCardComponent } from './product-card/product-card.component';
+import localeFr from '@angular/common/locales/fr';
+import { registerLocaleData } from '@angular/common';
+
 
 
 @NgModule({
@@ -32,4 +35,9 @@ import { ProductCardComponent } from './product-card/product-card.component';
   providers: [ProductoService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+constructor() {
+  registerLocaleData(localeFr);
+  
+}
+ }

@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
   porcentaje: number = 0;
 
   constructor(
-    private router: Router,
-    private productoService: ProductoService
+    private router: Router, //inyecta el servicio Router.para la navegación en la aplicación Angular
+    private productoService: ProductoService //interactuar con los datos de los productos.
   ) {}
 
   /**
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
    * @param {String} Grupo: el parámetro "Grupo" es una cadena que representa el grupo de productos que
    * quiero filtrar por catalogo.Puede ser un nombre de grupo específico o "*" para indicar todos los grupos.
    * @param {String} Marca: el parámetro "MARCA" es una cadena que representa la marca del producto.. Filtra aquellos
-   *  elementos cuya marca es igual a la marca proporcionada como parámetro, o la todas las marca es '*', y lo mismo para
+   *  elementos cuya marca es igual a la marca proporcionada como parámetro, o  todas las marca es '*', y lo mismo para
    * el grupo
    */
   obtenerProducto(grupo: String, marca: String): void {
@@ -82,6 +82,7 @@ export class AppComponent implements OnInit {
     let precio: any;
     let precioDistribuidor: any;
 
+    
     if (parseFloat(porcentaje) > 0) {
       for (let index = 0; index < this.productoList.length; index++) {
         precio = this.productoList[index].precio;
@@ -107,7 +108,7 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * La función "Deshaceraajuste" ajusta los precios de los productos en una lista basada en un porcentaje determinado
+   * La función "Deshacer ajuste" ajusta los precios de los productos en una lista basada en un porcentaje determinado
    * y actualiza la lista en la base de datos.
    * @param {any} porcentaje - el parámetro "Porcentaje" representa el porcentaje por el cual los precios
    * de los productos deben ajustarse.
