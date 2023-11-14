@@ -18,6 +18,7 @@ export class ListaProductosComponent implements OnInit {
   public porcentaje: number;
   public producto: Producto;
   public precioAnterior: number;
+  fechaActualizacion : Date = new Date;
 
   data: any = {};
 

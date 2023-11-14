@@ -17,6 +17,7 @@
   transition: transform 0.3s ease;
   /*Es para que tenga un efecto zoom*/
   min-height: 100px;
+  background-color: rgb(253, 247, 247);
 }
 
 .card:hover {
@@ -38,6 +39,7 @@
   margin-left: 10px;
   margin-bottom: 0;
   gap: 10px; /* Espacio entre las tarjetas*/
+  border-radius: 10px;
 }
 .card p{
   font-size: 12px;
@@ -116,4 +118,16 @@
 }
 .card-text-detalle{
   margin-bottom: 10px;
+}
+ img{
+  
+    width: "286px";
+    height: "163px";
+    box-sizing: border-box;
+}
+.fechactualizacion{
+  text-align: center; /* Alinea el texto al centro */
+  margin-top: 5px; /* Puedes ajustar según sea necesario */
+  font-size: 12px; /* Puedes ajustar según sea necesario */
+  color: #555; /* Puedes ajustar el color según sea necesario */
 }

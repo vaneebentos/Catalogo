@@ -91,7 +91,7 @@
 <div class="row card-container">
     <div *ngFor="let producto of productoList" class="col s3 mb-4 mt-4" style="bottom: 0px">
         <div class="card" style="width: 18rem;">
-            <img [src]="producto.imagenBlob" alt="{{producto.marca}} Imagen" width="280px">
+            <img [src]="producto.imagenBlob" alt="{{producto.marca}} Imagen" width="286px" height="163px" >
 
             <h5 class="card-title">{{producto.marca.toUpperCase()}} {{producto.modelo.toUpperCase()}}</h5>
 
@@ -104,9 +104,9 @@
                     <h5><b><span class="cliente-text">CLIENTE:</span></b></h5>
                 </div>
                 <div class="precio-values">
-                    <span class="monto"> USD {{ producto.precio | number:'1.2-2' }}</span>
+                    <b><span class="monto"> USD {{ producto.precio | number:'1.2-2' }}</span></b>
                     <span>/</span>
-                    <span class="monto">$ {{ (producto.precio * data.venta) | number:'1.2-2':'fr' }}</span>
+                    <b><span class="monto">$ {{ (producto.precio * data.venta) | number:'1.2-2':'fr' }}</span></b>
                 </div>
             </div>
 
@@ -118,12 +118,16 @@
                     <h5><b><span class="distri-text">DISTRI:</span></b></h5>
                 </div>
                 <div class="precio-values">
-                    <span class="monto"> USD {{ producto.precioDistribuidor | number:'1.2-2' }}</span>
+                    <b><span class="monto"> USD {{ producto.precioDistribuidor | number:'1.2-2' }}</span></b>
                     <span>/</span>
-                    <span class="monto">$ {{ (producto.precioDistribuidor * data.venta) | number:'1.2-2':'fr' }}</span>
-                </div>
-            </div>
-        </div>
+                    <b><span class="monto"> $ {{ (producto.precioDistribuidor * data.venta) | number:'1.2-2':'fr' }}</span></b>
+              </div>    
+                   </div>
+                    <p class="fechaActualizacion">  {{fechaActualizacion | date:'dd-MM-yyyy HH:mm:ss' :'America/Argentina/Buenos_Aires'}}<p>
+
+              
+        </div>    
+         
     </div>
 </div>
 

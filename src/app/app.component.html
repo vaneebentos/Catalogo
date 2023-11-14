@@ -22,6 +22,10 @@ En la parte superior de la página con un margen de 0px y una parte inferior de 
         opciones.Cada opción es un enlace a una página diferente, especificada por el atributo RouterLink.
         El evento (clic) se utiliza para llamar a la función "ObtenerProducto" con los apropiado
         Parámetros Cuando se hace clic en una opción.-->
+        
+        
+      
+        
         <li class="nav-item ml-2">
           <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -184,7 +188,7 @@ En la parte superior de la página con un margen de 0px y una parte inferior de 
       <div class="nav-item ml-2 custom-buttons ">
         <label for="porcentaje"></label>
         <input type="number" #porcentaje id="porcentaje" value="0" min="0" step="1">
-        <button (click)="ajustarPrecio(porcentaje.value)">Ajustar Precio</button>
+        <button type="button" (click)="ajustarPrecio(porcentaje.value)">Ajustar Precio</button>
         <button (click)="deshacerAjuste(porcentaje.value)">Deshacer Ajuste</button>
         <button (click)="revertirCambios()">Mostrar Productos</button>
       </div>
@@ -197,9 +201,12 @@ En la parte superior de la página con un margen de 0px y una parte inferior de 
     </nav>
 
 
-    <div class="content-container">
+    <body>
+  <div class="content-container">
       <app-lista-productos [productoList]="productoList"></app-lista-productos>
       <router-outlet></router-outlet>
     </div>
+  </body>
   </div>
 </div>
+
